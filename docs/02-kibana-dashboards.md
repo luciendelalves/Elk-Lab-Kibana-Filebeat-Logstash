@@ -43,8 +43,10 @@ event.dataset:"system.auth" and message:"*Failed password*"
 # 1. Menu ≡ → Dashboard → Create dashboard
 # 2. Add from library → selecione os 3 painéis criados
 # 3. Salve como: System Auth — SSH Failures
+```
 
 ## Exemplo de Dashboard
 
 ![Dashboard SSH Failures](img/dashboard-ssh-failures.png)
+
 
