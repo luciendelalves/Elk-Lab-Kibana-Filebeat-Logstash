@@ -2,6 +2,10 @@
 
 Laboratório em Ubuntu Server com ingestão via Filebeat → Logstash → Elasticsearch e visualização no Kibana.
 
+## 🔍 Preview do Dashboard
+
+![Dashboard SSH Failures](docs/img/dashboard-ssh-failures.png)
+
 ## Objetivos
 - Centralizar e visualizar logs do sistema em um ambiente de laboratório.
 - Criar dashboards básicos de falhas de autenticação SSH.
