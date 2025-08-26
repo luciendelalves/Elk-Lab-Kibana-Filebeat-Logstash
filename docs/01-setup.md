@@ -1,6 +1,7 @@
 # Setup do ELK Lab (Ubuntu + Filebeat → Logstash → Elasticsearch → Kibana)
 > Guia rápido em um único bloco. Linhas iniciadas com `#` são comentários.
 
+```bash
 # =========================
 # REQUISITOS DO AMBIENTE
 # =========================
@@ -98,3 +99,4 @@ journalctl -u filebeat -n 50 --no-pager
 # =========================
 # Falhas de autenticação SSH:
 # event.dataset:"system.auth" and message:"*Failed password*"
+```
