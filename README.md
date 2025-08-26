@@ -51,6 +51,7 @@ event.dataset:"system.auth" and (message:"*Failed password*" or message:"*Invali
 
 ## Documentação
 - [Setup](docs/01-setup.md)
+- [SSH Failures (Discover)](docs/02-discover-ssh-failures.md)
 - [Dashboards no Kibana](docs/02-kibana-dashboards.md)
 - [Troubleshooting](docs/03-troubleshooting.md)
-- [Discover ssh failures](docs/02-discover-ssh-failures.md)
+
