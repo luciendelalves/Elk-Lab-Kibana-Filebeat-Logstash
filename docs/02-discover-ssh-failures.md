@@ -20,5 +20,5 @@ Filtro de tempo: **Last 15 minutes**
 event.dataset:"system.auth" and (message:"*Failed password*" or message:"*Invalid user*")
 ```
 
-![SSH Failures Discover](docs/img/discover-ssh-failures.png)
+![SSH Failures Discover](img/discover-ssh-failures.png)
 
