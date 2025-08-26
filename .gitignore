@@ -1,0 +1,13 @@
+# Logs/artefatos locais
+*.log
+*.pid
+*.gz
+*.zip
+.DS_Store
+
+# Segurança
+*.keystore
+*.p12
+*password*
+secrets/
+.env
