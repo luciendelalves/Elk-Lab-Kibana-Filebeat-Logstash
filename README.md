@@ -14,6 +14,36 @@ Laboratório em Ubuntu Server com ingestão via Filebeat → Logstash → Elasti
 ## Arquitetura
 Filebeat → Logstash → Elasticsearch → Kibana
 
+## ⚙️ Setup resumido
+1. **Elasticsearch**
+   - Config em `/etc/elasticsearch/elasticsearch.yml`
+   - Teste: `curl http://127.0.0.1:9200`
+
+2. **Kibana**
+   - Config em `/etc/kibana/kibana.yml`
+   - Acesso: `http://<IP_VM>:5601`
+
+3. **Logstash**
+   - Pipeline em `/etc/logstash/conf.d/01-beats.conf`
+   - Porta Beats: `5044`
+
+4. **Filebeat**
+   - Config saída para Logstash em `/etc/filebeat/filebeat.yml`
+   - Módulo **system** habilitado (`syslog` e `auth`)
+   - Serviço ativo: `systemctl status filebeat`
+
+---
+
+## 🔍 Descoberta de eventos (Discover no Kibana)
+Data view: **filebeat-***  
+Filtro de tempo: **Last 15 minutes**  
+
+### Query KQL utilizada
+```kql
+event.dataset:"system.auth" and (message:"*Failed password*" or message:"*Invalid user*")
+```
+![SSH Failures Discover](docs/img/discover-ssh-failures.png)
+
 ## Serviços e portas
 - Kibana: 5601
 - Elasticsearch: 9200
