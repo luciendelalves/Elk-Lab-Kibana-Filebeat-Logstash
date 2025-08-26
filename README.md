@@ -2,15 +2,21 @@
 
 Laboratório em Ubuntu Server com ingestão via Filebeat → Logstash → Elasticsearch e visualização no Kibana.
 
-## Serviços e portas
-- Kibana: 5601 | Elasticsearch: 9200 | Logstash (Beats): 5044
+## Objetivos
+- Centralizar e visualizar logs do sistema em um ambiente de laboratório.
+- Criar dashboards básicos de falhas de autenticação SSH.
+- Documentar a instalação, configuração e troubleshooting.
 
-## Passos rápidos
-1. Crie o Data View `filebeat-*` em **Stack Management → Data Views** (timestamp: `@timestamp`).
-2. **Discover:** ajuste o tempo (Last 24 hours) e teste KQL:
-   `event.dataset:"system.auth" and message:"*Failed password*"`
-3. **Dashboard (Lens):**
-   - SSH failures over time (Count x Date histogram @timestamp)
-   - Top source IP (Count por top values de `source.ip`)
-   - SSH failures by host (Count por top values de `host.hostname`)
+## Arquitetura
+Filebeat → Logstash → Elasticsearch → Kibana
+
+## Serviços e portas
+- Kibana: 5601
+- Elasticsearch: 9200
+- Logstash (Beats): 5044
+
+## Documentação
+- [Setup](docs/01-setup.md)
+- [Dashboards no Kibana](docs/02-kibana-dashboards.md)
+- [Troubleshooting](docs/03-troubleshooting.md)
 
