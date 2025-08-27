@@ -57,10 +57,10 @@ event.dataset:"system.auth" and (message:"*Failed password*" or message:"*Invali
 Criamos visualizações no **Kibana Lens** para monitorar tentativas de login SSH inválidas.  
 
 - **SSH_Failed_Logins_Over_Time** → gráfico de linha mostrando evolução das falhas de login.  
-  ![SSH Failed Logins Over Time](img/ssh_failed_logins.png)
+  ![SSH Failed Logins Over Time](docs/img/SSH_Failed_Logins_Over_Time.png)
 
 - **SSH_Top_Messages** → gráfico de barras exibindo as principais mensagens capturadas do `auth.log`.  
-  ![SSH Top Messages](img/ssh_top_messages.png)
+  ![SSH Top Messages](docs/img/SSH_Top_Messages.png)
 
 📌 Documentação detalhada: [Dashboards SSH no Kibana](docs/04-kibana-ssh-dashboards.md)
 
