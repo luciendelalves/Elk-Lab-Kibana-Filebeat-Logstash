@@ -52,6 +52,8 @@ event.dataset:"system.auth" and (message:"*Failed password*" or message:"*Invali
 ```
 ![SSH Failures Discover](docs/img/discover-ssh-failures.png)
 
+---
+
 ## 📊 Dashboards SSH no Kibana
 
 Criamos visualizações no **Kibana Lens** para monitorar tentativas de login SSH inválidas.  
