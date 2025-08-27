@@ -56,7 +56,8 @@ event.dataset:"system.auth" and (message:"*Failed password*" or message:"*Invali
 
 ## 📊 Dashboards SSH no Kibana
 
-Criamos visualizações no **Kibana Lens** para monitorar tentativas de login SSH inválidas.  
+Após a ingestão dos logs de autenticação do Ubuntu pelo Filebeat, criamos visualizações no **Kibana Lens** para monitorar tentativas de login SSH inválidas. 
+
 
 - **SSH_Failed_Logins_Over_Time** → gráfico de linha mostrando evolução das falhas de login.  
   ![SSH Failed Logins Over Time](docs/img/SSH_Failed_Logins_Over_Time.png)
