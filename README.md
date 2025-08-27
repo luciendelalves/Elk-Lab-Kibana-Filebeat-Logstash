@@ -70,7 +70,7 @@ Após a ingestão dos logs de autenticação do Ubuntu pelo Filebeat, criamos vi
      message : "*Failed password*" or message : "*Invalid user*"
      ```
    - Resultado: gráfico de linha mostrando a evolução das tentativas de login SSH inválidas ao longo do tempo.  
-   ![SSH Failed Logins Over Time](docs/img/ssh_failed_logins.png)
+   ![SSH Failed Logins Over Time](img/ssh_failed_logins.png)
 
 2. **SSH_Top_Messages**  
    - Tipo: Bar chart  
@@ -82,7 +82,7 @@ Após a ingestão dos logs de autenticação do Ubuntu pelo Filebeat, criamos vi
      message : "*Failed password*" or message : "*Invalid user*"
      ```
    - Resultado: gráfico de barras exibindo as principais mensagens capturadas do `auth.log` (ex.: `Invalid user`, `Failed password for root`, etc.).  
-   ![SSH Top Messages](docs/img/ssh_top_messages.png)
+   ![SSH Top Messages](img/ssh_top_messages.png)
 
 Essas visualizações foram adicionadas ao **Dashboard “SOC_ELK_SSH_Dashboard”**, consolidando os gráficos para análise centralizada no Kibana.
 
