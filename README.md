@@ -54,36 +54,15 @@ event.dataset:"system.auth" and (message:"*Failed password*" or message:"*Invali
 
 ## 📊 Dashboards SSH no Kibana
 
-Após a ingestão dos logs de autenticação do Ubuntu pelo Filebeat, criamos visualizações no **Kibana Lens** para monitorar tentativas de login SSH inválidas.
+Criamos visualizações no **Kibana Lens** para monitorar tentativas de login SSH inválidas.  
 
----
+- **SSH_Failed_Logins_Over_Time** → gráfico de linha mostrando evolução das falhas de login.  
+  ![SSH Failed Logins Over Time](img/ssh_failed_logins.png)
 
-### 🔹 Visualizações criadas
+- **SSH_Top_Messages** → gráfico de barras exibindo as principais mensagens capturadas do `auth.log`.  
+  ![SSH Top Messages](img/ssh_top_messages.png)
 
-1. **SSH_Failed_Logins_Over_Time**  
-   - Tipo: Line chart  
-   - Campos:  
-     - Eixo X → `@timestamp` (Date histogram)  
-     - Eixo Y → `Count of records`  
-   - Filtro aplicado:  
-     ```kql
-     message : "*Failed password*" or message : "*Invalid user*"
-     ```
-   - Resultado: gráfico de linha mostrando a evolução das tentativas de login SSH inválidas ao longo do tempo.  
-   ![SSH Failed Logins Over Time](docs/img/SSH_Failed_Logins_Over_Time.png) 
-2. **SSH_Top_Messages**  
-   - Tipo: Bar chart  
-   - Campos:  
-     - Eixo X → `Top values of message.keyword`  
-     - Eixo Y → `Count of records`  
-   - Filtro aplicado:  
-     ```kql
-     message : "*Failed password*" or message : "*Invalid user*"
-     ```
-   - Resultado: gráfico de barras exibindo as principais mensagens capturadas do `auth.log` (ex.: `Invalid user`, `Failed password for root`, etc.).  
-   ![SSH Top Messages](docs/img/SSH_Top_Messages.png) 
-
-Essas visualizações foram adicionadas ao **Dashboard “SOC_ELK_SSH_Dashboard”**, consolidando os gráficos para análise centralizada no Kibana.
+📌 Documentação detalhada: [Dashboards SSH no Kibana](docs/04-kibana-ssh-dashboards.md)
 
 ---
 
@@ -99,4 +78,6 @@ Essas visualizações foram adicionadas ao **Dashboard “SOC_ELK_SSH_Dashboard�
 - [SSH Failures (Discover)](docs/02-discover-ssh-failures.md)
 - [Dashboards no Kibana](docs/02-kibana-dashboards.md)
 - [Troubleshooting](docs/03-troubleshooting.md)
+- [Dashboards SSH no Kibana](docs/04-kibana-ssh-dashboards.md)
+
 
